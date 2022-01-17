@@ -81,45 +81,43 @@ day();*/
 
 //Exercise #1 Part1
 //sabado es 6 y domingo es 0 entonces no son considerados
-/*function businessHours(dayNumber,hourNumber){
+function businessHours(dayNumber,hourNumber){
 
         if(hourNumber>=9 && hourNumber<=18 && dayNumber>=1 && dayNumber<=5){
-            console.log("Laboral");
-            return true;
-        }else{
-            console.log("No Laboral");
-            return false;
-            
-           
+          return true;
+        } else {
+          return false;
         }
 
     }
 
-    console.log(businessHours(5,8));*/
+    console.log(businessHours(5,8));
 
-function getDayNumber(janFirstDayNumber, yearDayNumber) {
-    if(yearDayNumber>=0 && yearDayNumber<=365 && janFirstDayNumber>=0 && janFirstDayNumber<=6){
-  let rest = yearDayNumber % 7;
-  console.log(janFirstDayNumber);
-  console.log(rest);
-  if (rest == janFirstDayNumber && janFirstDayNumber==0) {
-    console.log("El dia fue Domingo");
-  } else if (janFirstDayNumber == rest  && janFirstDayNumber==1) {
-    console.log("El dia fue Lunes");
-  } else if (rest == janFirstDayNumber && janFirstDayNumber==2) {
-    console.log("El dia fue Martes");
-  } else if (rest == janFirstDayNumber && janFirstDayNumber==3) {
-    console.log("El dia fue Miercoles");
-  } else if (rest == janFirstDayNumber && janFirstDayNumber==4) {
-    console.log("El dia fue Jueves");
-  } else if (rest == janFirstDayNumber && janFirstDayNumber==5) {
-    console.log("El dia fue Viernes");
-  } else if (rest == janFirstDayNumber && janFirstDayNumber==6) {
-    console.log("El dia fue Sabado");
-  } else {
-    console.log("No valido");
-  }
-}
-  }
 
-getDayNumber(2, 170);
+
+//Exercise #1 part
+var yearDayNumber = prompt("Indica el número de día :")
+var janfirstDayNumber = yearDayNumber % 7;
+if(yearDayNumber>=0&&yearDayNumber<=365){
+	var janfirstDayNumber = yearDayNumber % 7;
+if(janfirstDayNumber==0){
+	alert("El día fue lunes");
+}else if(janfirstDayNumber==1){
+	alert("El dia fue martes");
+}else if(janfirstDayNumber==2){
+	alert("El dia fue miércoles");
+}else if(janfirstDayNumber==3){
+	alert("El dia fue jueves");
+}else if(janfirstDayNumber==4){
+	alert("El dia fue viernes");
+}else if(janfirstDayNumber==5){
+	alert("El dia fue sábado");
+}else if(janfirstDayNumber==6){
+	alert("El dia fue domingo");
+}else{
+	alert("Lo sentimos el año solo tiene 365 días");
+};
+}else{
+		alert("Lo sentimos el año solo tiene 365 días");
+};
+
